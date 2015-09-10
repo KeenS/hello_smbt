@@ -1,4 +1,4 @@
-target smlsharp
+target all
     sources
        main.sml
        hello.sml
@@ -7,11 +7,18 @@ target smlsharp
         hello_c.c
         cflags -m32
     end
-    post hooks
-       ./main
-    end
 
     option entry = main.smi
     option compiler = smlsharp
     option output = main
+    post hooks
+       ./main
+    end
+end
+
+target clean
+    pre hooks
+        rm *.o
+        rm main
+    end
 end

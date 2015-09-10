@@ -8,11 +8,11 @@ prerequirments
 * [smbt](https://github.com/finrod/smbt)
 
 ```sh
-smbt smlsharp
+smbt all
 ```
 
 # Continuous compilaion
 
 ```sh
-smbt -c smlsharp
+smbt -c all
 ```
