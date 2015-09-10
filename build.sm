@@ -1,0 +1,17 @@
+target smlsharp
+    sources
+       main.sml
+       hello.sml
+    end
+    ffi
+        hello_c.c
+        cflags -m32
+    end
+    post hooks
+       ./main
+    end
+
+    option entry = main.smi
+    option compiler = smlsharp
+    option output = main
+end

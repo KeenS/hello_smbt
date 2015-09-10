@@ -1,0 +1,5 @@
+_require "basis.smi"
+
+structure Hello = struct
+    val hello: string -> unit
+end
